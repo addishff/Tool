@@ -1,0 +1,27 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+
+*.iml
+*/*.iml
+.DS_Store
+
+## Directory-based project format:
+.idea/
+
+target/
+*/target/
+
+*/WebContent
+
+*/deploy.local.sh
+*/.settings
+logs/
+*/logs
+.classpath
+.project
+build.properties
+*.class
+classes/
+.settings/org.eclipse.core.resources.prefs
+
+*/mvn.sh
+*.log
