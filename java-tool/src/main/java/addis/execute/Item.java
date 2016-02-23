@@ -1,6 +1,6 @@
 package addis.execute;
 
-/**
+import java.lang.Integer;import java.lang.Override;import java.lang.String; /**
  * Created by huangfeifeng on 2/22/16.
  */
 public class Item {

@@ -1,6 +1,5 @@
 package addis.execute;
 
-import addis.util.Convertor;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
@@ -22,6 +21,6 @@ public class MainClass {
         String jsonStr = jsonObject.toJSONString();
 //        Convertor.setBean(JSONObject.parseObject(jsonStr), arrayBean);
         arrayBean = JSON.toJavaObject(JSON.parseObject(jsonStr), ArrayBean.class);
-        System.out.println(arrayBean.toString());
+        java.lang.System.out.println(arrayBean.toString());
     }
 }

@@ -2,10 +2,13 @@ package addis.execute;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.reflect.Field;
+import java.lang.Boolean;
+import java.lang.Object;
+import java.lang.String;
+import java.lang.System;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Scanner;
+import java.util.SortedMap;
 
 /**
  * Created by huangfeifeng on 2/23/16.
@@ -16,7 +19,7 @@ public class CompareProperties {
         if (!file.exists())
             return null;
         Scanner scan = new Scanner(file);
-        HashMap<String, String> properties = new HashMap<>();
+        HashMap<String, String> properties = new HashMap<String, String>();
         while (scan.hasNext()) {
             properties.put(scan.next(), scan.next());
         }
@@ -24,13 +27,18 @@ public class CompareProperties {
     }
 
     public static Boolean compare(HashMap map1, HashMap map2) {
+        boolean result = true;
         for (Object o : map1.keySet()) {
             if (map2.containsKey(o) && map1.get(o).equals(map2.get(o)))
                 continue;
-            else
-                return false;
+            else {
+                System.out.println();
+                System.out.println("map1->" + o + "><" + map1.get(o));
+                System.out.println("map2->" + o + "><" + map2.get(o));
+                result = false;
+            }
         }
-        return true;
+        return result;
     }
 
     public static void main(String... args) throws FileNotFoundException {
