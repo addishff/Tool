@@ -1,11 +1,12 @@
 package addis.execute;
 
-import java.lang.Integer;import java.lang.Override;import java.lang.String;import java.util.Arrays;
+import java.io.Serializable;
+import java.util.Arrays;
 
 /**
  * Created by huangfeifeng on 2/22/16.
  */
-public class ArrayBean {
+public class ArrayBean implements Serializable {
     Integer[] integers;
     int[] ints;
     long[] longs;

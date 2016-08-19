@@ -53,11 +53,14 @@ public class DatabaseConnection {
 
 
     public static void main(String... args) throws SQLException {
-        DatabaseConnection dataBaseConnection = new DatabaseConnection();
-        dataBaseConnection.select();
-        System.out.println();
-        dataBaseConnection.insert();
-        dataBaseConnection.select();
+//        DatabaseConnection dataBaseConnection = new DatabaseConnection();
+//        dataBaseConnection.select();
+//        System.out.println();
+//        dataBaseConnection.insert();
+//        dataBaseConnection.select();
+
+        Integer a = 2;
+        System.out.println(a==2);
     }
 
 }
