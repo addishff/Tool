@@ -1,0 +1,7 @@
+#set($iAmVaribale="good")
+welcome $name to velocity.com
+taday is $date
+#foreach($i in $list)
+    $i
+#end
+$iAmVaribale

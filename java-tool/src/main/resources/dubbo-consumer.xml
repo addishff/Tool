@@ -7,7 +7,10 @@
 
     <!-- 生成远程服务代理，可以和本地bean一样使用 -->
     <dubbo:consumer timeout="30000" check="false"/>
-    <dubbo:reference id="mCenterCommentService" interface="com.vdian.fxmsg.client.service.MCenterCommentService"
+    <!--<dubbo:reference id="mCenterCommentService" interface="com.vdian.fxmsg.client.service.MCenterCommentService"-->
+    <!--version="1.0"/>-->
+    <!--<dubbo:reference id="indexMsgService" interface="com.vdian.fxmsg.client.service.IndexMsgService"-->
+    <!--version="1.0"/>-->
+    <dubbo:reference id="messageService" interface="com.vdian.imax.logic.service.MessageService"
                      version="1.0"/>
-
 </beans>

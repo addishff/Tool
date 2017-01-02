@@ -6,10 +6,26 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!-- 提供方应用信息，用于计算依赖关系 -->
-    <dubbo:application name="fxmsg-center"/>
-    <!-- dubbo 配置 -->
-    <dubbo:monitor protocol="registry"/>
-    <dubbo:registry id="fxmsg" address="zookeeper://zk.vdian.net:2181?backup=zk.vdian.net:2182,zk.vdian.net:2183"/>
+    <!--&lt;!&ndash; 提供方应用信息，用于计算依赖关系 &ndash;&gt;-->
+    <!--<dubbo:application name="fxmsg-center"/>-->
+    <!--&lt;!&ndash; dubbo 配置 &ndash;&gt;-->
+    <!--<dubbo:monitor protocol="registry"/>-->
+    <!--<dubbo:registry id="fxmsg" address="zookeeper://zk.vdian.net:2181?backup=zk.vdian.net:2182,zk.vdian.net:2183"/>-->
 
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="fenxiao-core"/>
+    <dubbo:protocol name="dubbo" host="localhost" port="20881" />
+
+    <!-- 配置监控 -->
+    <dubbo:monitor protocol="registry" />
+
+    <dubbo:registry id="ic"
+                    address="zookeeper://zk1.dubbo.daily.idcvdian.com?backup=zk2.dubbo.daily.idcvdian.com,zk3.dubbo.daily.idcvdian.com" />
+    <dubbo:registry id="fenxiao"
+                    address="zookeeper://zk1.dubbo.daily.idcvdian.com?backup=zk2.dubbo.daily.idcvdian.com,zk3.dubbo.daily.idcvdian.com" />
 </beans>
+
+        <!--dubbo.wholesale.zk=zookeeper://10.2.101.56:2560-->
+        <!--dubbo.interface.version=1.0-->
+        <!--dubbo.port=4888-->
+        <!--dubbo.service=fxmsg-->
