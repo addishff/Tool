@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 工具类,获取T+N交易日,类内部时间戳偏移到第8时区;
  */
 public class TradeDayUtil {
+
     //以Unix时间存储节假日,偏移到第8时区,单位毫秒,精确到天
     private static final ConcurrentHashMap<Long, Integer> HOLIDAYS = new ConcurrentHashMap<Long, Integer>();
     //一周的时间长度,单位毫秒
@@ -157,7 +158,7 @@ public class TradeDayUtil {
     }
 
     private static String getGmt8Time(long dayMills) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd z");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd HH z");
         simpleDateFormat.setTimeZone(TimeZone.getTimeZone("ETC/GMT-8"));
         Date date = new Date(dayMills - GMT8_OFFSET);
         return simpleDateFormat.format(date);
